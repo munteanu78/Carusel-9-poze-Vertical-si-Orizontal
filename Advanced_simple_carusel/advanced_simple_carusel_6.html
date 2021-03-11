@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two stage carousel | Advanced CSS Selectors </title>
+    <style>
+        body{
+           background-color: #234; 
+        }
+        .carousel{
+            background: rgb(20, 31, 41);
+            width: 840px;
+           /* border: 3px solid green;*/
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            box-shadow: 0 0  10px 2px rgb(78, 78, 78);
+
+        }
+        .carousel .slide{
+            width: 1800px;
+           /* border: 3px solid red;*/
+            transition: 1s;
+        }   
+        .carousel .controls {
+            text-align: center;
+            background: rgb(20, 31, 41);
+        }
+        .carousel .controls a{
+            color: white;
+            text-decoration: none;
+        }
+        .carousel #left:target .slide{
+            transform: translateX(0px);
+        }
+        .carousel #right:target .slide {
+            transform: translateX(-860px);
+        }
+       
+        
+         .controls img:hover {
+             -webkit-filter: drop-shadow(5px 0px 5px #c4c4c4);
+            filter: drop-shadow(3px 0px 3px rgb(182, 182, 182));
+            transition: 0.3s;
+}
+
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div id="left">
+            <div id="right">
+                <div class="slide">
+                    <img src="https://i.picsum.photos/id/91/280/400.jpg?hmac=yFaFNO474iDtJNBszS9V1E_ua3pcwu0EDzctehBsEqY" >
+                    <img src="https://i.picsum.photos/id/479/280/400.jpg?hmac=AUAXIkOj6ePKuRftJuVuljGpNdNwqdQzwcWSFrxhZkA" >
+                    <img src="https://i.picsum.photos/id/623/280/400.jpg?hmac=5s6rd9tId1FDnm66QC6F2mUJb1QEHmlNS3Xg_Gn9QFg" >
+                    <img src="https://i.picsum.photos/id/6/280/400.jpg?hmac=7EW5k6ZOj-tSyPxaiT_HD9nUbZg4cxCjPz-FeQNyNhw" >
+                    <img src="https://i.picsum.photos/id/156/280/400.jpg?hmac=a70bHdqfKyf-qhwKu7icL1dNQIUNFYrYAeCm3l-T2WE" >
+                    <img src="https://i.picsum.photos/id/522/280/400.jpg?hmac=ODK2xtzb1I0_FZtTyHZsfaW-1CfnB9exjLWDh3vk2-Y" >
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <a href="#left"><img src="https://icons.iconarchive.com/icons/everaldo/crystal-clear/32/Action-arrow-blue-double-left-icon.png" alt=""></a>
+            <a href="#right"><img src="https://icons.iconarchive.com/icons/everaldo/crystal-clear/32/Action-arrow-blue-double-right-icon.png" alt=""></a>
+        </div>
+    </div>
+    
+</body>
+</html>
